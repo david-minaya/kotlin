@@ -54,6 +54,14 @@ class MultiModuleLineMarkerTest : AbstractMultiModuleHighlightingTest() {
         doMultiPlatformTest(TargetPlatformKind.Jvm[JvmTarget.JVM_1_6], TargetPlatformKind.JavaScript)
     }
 
+    fun testHierarchyWithExpectClassCommonSide() {
+        doMultiPlatformTest(TargetPlatformKind.Jvm[JvmTarget.JVM_1_6])
+    }
+
+    fun testHierarchyWithExpectClassPlatformSide() {
+        doMultiPlatformTest(TargetPlatformKind.Jvm[JvmTarget.JVM_1_6])
+    }
+
     fun testKotlinTestAnnotations() {
         doMultiPlatformTest(TargetPlatformKind.JavaScript,
                             configureModule = { module, _ ->
